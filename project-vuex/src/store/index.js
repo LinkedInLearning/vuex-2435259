@@ -31,6 +31,12 @@ export default createStore({
     getBooksInStock: (state) => {
       return state.books.filter(books => books.availability);
     },
+    getBooksNotStock: (state) => {
+      return state.books.filter(books => !books.availability);
+    },
+    booksInStockCount: (state, getters) => {
+      return state.books.length - getters.getBooksNotStock.length;
+    },
   },
   mutations: {
   },
