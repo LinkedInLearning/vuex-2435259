@@ -1,17 +1,16 @@
 <template>
   <div>
     <h1>Bibliothèque Online</h1>
-    <h4>Utilisateur connecté : {{ $store.state.user.name }}</h4>
-    <h4>ID : {{ showIdUser }}</h4>
+    <h4>Utilisateur connecté : {{ user.name }} - {{ user.id }}</h4>
   </div>
 </template>
 
 <script>
+import { mapState } from "vuex";
+
 export default {
   computed: {
-    showIdUser() {
-      return this.$store.state.user.id;
-    },
+    ...mapState(["user"]),
   },
 };
 </script>
