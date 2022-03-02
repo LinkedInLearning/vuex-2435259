@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import { mapState, mapGetters } from "vuex";
+import { mapState, mapGetters, mapMutations } from "vuex";
 
 export default {
   data() {
@@ -34,8 +34,9 @@ export default {
     }),
   },
   methods: {
+    ...mapMutations(["increment"]),
     incrementDonation() {
-      return this.$store.commit("increment", {
+      this.increment({
         amount: this.incrementBy,
       });
     },
