@@ -43,8 +43,8 @@ export default createStore({
     }
   },
   mutations: {
-    increment(state) {
-      state.donation += 1;
+    increment(state, payload) {
+      state.donation += payload.amount;
     }
   },
   actions: {

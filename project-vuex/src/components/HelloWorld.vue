@@ -11,7 +11,8 @@
     </ul>
     <hr />
     <div>Total des dons : {{ donation }} €</div>
-    <button @click="incrementDonation">+1€</button>
+    <input type="number" v-model.number="incrementBy" />
+    <button @click="incrementDonation">Faire ce don</button>
   </div>
 </template>
 
@@ -19,6 +20,11 @@
 import { mapState, mapGetters } from "vuex";
 
 export default {
+  data() {
+    return {
+      incrementBy: 1,
+    };
+  },
   computed: {
     ...mapState(["donation", "user"]),
     ...mapGetters({
@@ -29,7 +35,9 @@ export default {
   },
   methods: {
     incrementDonation() {
-      return this.$store.commit("increment");
+      return this.$store.commit("increment", {
+        amount: this.incrementBy,
+      });
     },
   },
 };
