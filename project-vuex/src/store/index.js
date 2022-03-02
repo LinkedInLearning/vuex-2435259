@@ -5,7 +5,8 @@ export default createStore({
     donation: 1,
     user: {
       id: '01',
-      name: 'John Smith'
+      name: 'John Smith',
+      connected: true
     },
     books: [
       {
@@ -48,6 +49,11 @@ export default createStore({
     }
   },
   actions: {
+    updateDonation({ state, commit }, value) {
+      if (state.user.connected) {
+        commit('increment', value)
+      }
+    }
   },
   modules: {
   }
