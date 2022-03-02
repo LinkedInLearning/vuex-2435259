@@ -1,30 +1,6 @@
 import { createStore } from 'vuex'
-
-const moduleA = {
-  state: {
-    donation: 30
-  },
-  mutations: {
-  },
-  getters: {
-    login() { console.log("module A") }
-  },
-  actions: {
-  }
-}
-
-const moduleB = {
-  state: {
-    donation: 90
-  },
-  mutations: {
-  },
-  getters: {
-    login() { return "module B" }
-  },
-  actions: {
-  }
-}
+import { moduleA } from './moduleA';
+import { moduleB } from './moduleB';
 
 export default createStore({
   modules: {

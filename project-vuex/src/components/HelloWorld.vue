@@ -18,6 +18,8 @@
 
     <p>ModuleA : {{ $store.state.a.donation }}</p>
     <p>ModuleB : {{ $store.state.b.donation }}</p>
+    <p>Accès b/login: {{ $store.getters["b/login"] }}</p>
+    <p>Accès b/subModule/login: {{ $store.getters["b/subModule/login"] }}</p>
   </div>
 </template>
 
