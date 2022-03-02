@@ -1,8 +1,8 @@
-# Nom final de la formation
+# L'essentiel de Vuex
 
-Ce dossier Repository est lié au cours **LinkedIn Learning** Kurs `[Nom final de la formation]`. Le cours entier est disponible sur [LinkedIn Learning][lil-course-url].
+Ce dossier Repository est lié au cours **LinkedIn Learning** Kurs `[L'essentiel de Vuex]`. Le cours entier est disponible sur [LinkedIn Learning][lil-course-url].
 
-![Nom final de la formation][lil-thumbnail-url] 
+![L'essentiel de Vuex][lil-thumbnail-url] 
 
 DESCRIPTION DE LA FORMATION
 
@@ -21,7 +21,12 @@ La branche master correspond au code à la fin de la formation.
 
     Pour utiliser ces fichiers d’exercice, vous avez besoin de : 
     
-    [Liste des logiciels/dépendances utiles à la formation] 
+    ```
+    npm install
+    ```
+    ```
+    npm run serve
+    ```
     
     Clonez ce dossier Repository sur votre machine locale (Mac), CMD (Windows), ou sur un outil GUI tel que SourceTree. 
     
@@ -31,9 +36,9 @@ La branche master correspond au code à la fin de la formation.
 
 ### Instructeur
 
-**Nom du formateur** 
+**Maheva Dessart** 
 
- Retrouvez [Nom du formateur](https://www.linkedin.com/learning/instructors/) sur LinkedIn Learning.
+ Retrouvez [Maheva Dessart](https://www.linkedin.com/learning/instructors/) sur LinkedIn Learning.
 
 [0]: # (Replace these placeholder URLs with actual course URLs)
 [lil-course-url]: https://www.linkedin.com/learning/building-a-graphql-project-with-react-js
