@@ -2,6 +2,7 @@ import { createStore } from 'vuex'
 
 export default createStore({
   state: {
+    donation: 1,
     user: {
       id: '01',
       name: 'John Smith'
@@ -42,6 +43,9 @@ export default createStore({
     }
   },
   mutations: {
+    increment(state) {
+      state.donation += 1;
+    }
   },
   actions: {
   },

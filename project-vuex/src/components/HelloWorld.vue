@@ -9,6 +9,9 @@
         {{ book.title }} - {{ book.author }}
       </li>
     </ul>
+    <hr />
+    <div>Total des dons : {{ donation }} €</div>
+    <button @click="incrementDonation">+1€</button>
   </div>
 </template>
 
@@ -17,12 +20,17 @@ import { mapState, mapGetters } from "vuex";
 
 export default {
   computed: {
-    ...mapState(["user"]),
+    ...mapState(["donation", "user"]),
     ...mapGetters({
       listBooks: "getBooksInStock",
       nbBookInStock: "booksInStockCount",
       getBook: "getBookById",
     }),
+  },
+  methods: {
+    incrementDonation() {
+      return this.$store.commit("increment");
+    },
   },
 };
 </script>
