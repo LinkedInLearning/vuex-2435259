@@ -13,6 +13,11 @@
     <div>Total des dons : {{ donation }} €</div>
     <input type="number" v-model.number="incrementBy" />
     <button @click="incrementDonation">Faire ce don</button>
+
+    <hr />
+
+    <p>ModuleA : {{ $store.state.a.donation }}</p>
+    <p>ModuleB : {{ $store.state.b.donation }}</p>
   </div>
 </template>
 

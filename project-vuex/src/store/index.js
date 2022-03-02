@@ -1,6 +1,36 @@
 import { createStore } from 'vuex'
 
+const moduleA = {
+  state: {
+    donation: 30
+  },
+  mutations: {
+  },
+  getters: {
+    login() { console.log("module A") }
+  },
+  actions: {
+  }
+}
+
+const moduleB = {
+  state: {
+    donation: 90
+  },
+  mutations: {
+  },
+  getters: {
+    login() { return "module B" }
+  },
+  actions: {
+  }
+}
+
 export default createStore({
+  modules: {
+    a: moduleA,
+    b: moduleB
+  },
   state: {
     donation: 1,
     user: {
@@ -54,7 +84,5 @@ export default createStore({
         commit('increment', value)
       }
     }
-  },
-  modules: {
   }
 })
