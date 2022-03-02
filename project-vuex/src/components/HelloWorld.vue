@@ -3,6 +3,7 @@
     <h1>Bibliothèque Online</h1>
     <h4>Utilisateur connecté : {{ user.name }} - {{ user.id }}</h4>
     <h3>Liste des livres disponibles (total : {{ nbBookInStock }})</h3>
+    <p>Selection du livre ID: 11 {{ getBook(11) }}</p>
     <ul>
       <li v-for="book in listBooks" :key="book.id">
         {{ book.title }} - {{ book.author }}
@@ -22,6 +23,9 @@ export default {
     },
     nbBookInStock() {
       return this.$store.getters.booksInStockCount;
+    },
+    getBook() {
+      return this.$store.getters.getBookById;
     },
   },
 };

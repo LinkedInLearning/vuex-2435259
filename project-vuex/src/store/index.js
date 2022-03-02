@@ -37,6 +37,9 @@ export default createStore({
     booksInStockCount: (state, getters) => {
       return state.books.length - getters.getBooksNotStock.length;
     },
+    getBookById: (state) => (id) => {
+      return state.books.find(book => book.id === id);
+    }
   },
   mutations: {
   },
