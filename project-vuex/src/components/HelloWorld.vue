@@ -2,6 +2,11 @@
   <div>
     <h1>Bibliothèque Online</h1>
     <h4>Utilisateur connecté : {{ user.name }} - {{ user.id }}</h4>
+    <ul>
+      <li v-for="book in listBooks" :key="book.id">
+        {{ book.title }} - {{ book.author }}
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -11,6 +16,9 @@ import { mapState } from "vuex";
 export default {
   computed: {
     ...mapState(["user"]),
+    listBooks() {
+      return this.$store.getters.getBooksInStock;
+    },
   },
 };
 </script>

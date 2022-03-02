@@ -5,7 +5,32 @@ export default createStore({
     user: {
       id: '01',
       name: 'John Smith'
-    }
+    },
+    books: [
+      {
+        id: 11,
+        title: 'Les Misérables',
+        author: "Victor Hugo",
+        availability: true
+      },
+      {
+        id: 12,
+        title: 'Mathilda',
+        author: "Roald Dahl",
+        availability: false
+      },
+      {
+        id: 13,
+        title: 'Dune',
+        author: "Frank Herbert",
+        availability: true
+      },
+    ]
+  },
+  getters: {
+    getBooksInStock: (state) => {
+      return state.books.filter(books => books.availability);
+    },
   },
   mutations: {
   },
