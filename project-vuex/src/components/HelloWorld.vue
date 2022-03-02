@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import { mapState, mapGetters } from "vuex";
+import { mapState, mapGetters, mapActions } from "vuex";
 
 export default {
   data() {
@@ -34,8 +34,9 @@ export default {
     }),
   },
   methods: {
+    ...mapActions(["updateDonation"]),
     incrementDonation() {
-      this.$store.dispatch("updateDonation", {
+      this.updateDonation({
         amount: this.incrementBy,
       });
     },
