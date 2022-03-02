@@ -1,11 +1,19 @@
 <template>
   <div>
     <h1>Bibliothèque Online</h1>
+    <h4>Utilisateur connecté : {{ $store.state.user.name }}</h4>
+    <h4>ID : {{ showIdUser }}</h4>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  computed: {
+    showIdUser() {
+      return this.$store.state.user.id;
+    },
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
