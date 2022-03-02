@@ -13,20 +13,16 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapState, mapGetters } from "vuex";
 
 export default {
   computed: {
     ...mapState(["user"]),
-    listBooks() {
-      return this.$store.getters.getBooksInStock;
-    },
-    nbBookInStock() {
-      return this.$store.getters.booksInStockCount;
-    },
-    getBook() {
-      return this.$store.getters.getBookById;
-    },
+    ...mapGetters({
+      listBooks: "getBooksInStock",
+      nbBookInStock: "booksInStockCount",
+      getBook: "getBookById",
+    }),
   },
 };
 </script>
