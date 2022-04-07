@@ -1,8 +1,8 @@
 # L'essentiel de Vuex
 
-Ce dossier Repository est lié au cours **L'essentiel de Vuex**. Le cours entier est disponible sur [LinkedIn Learning][lil-course-url].
+Ce dossier Repository est lié au cours `L'essentiel de Vuex`. Le cours entier est disponible sur [LinkedIn Learning][lil-course-url].
 
-![Nom final de la formation][lil-thumbnail-url] 
+![L'essentiel de Vuex][lil-thumbnail-url] 
 
 Si vous développez des applications avec Vue.js, découvrez comment utiliser Vuex pour votre framework. Dans ce cours, Maheva Dessart, formatrice et développeuse web, vous explique comment tirer parti de ce plug-in officiel qui offre une banque de données centralisée à utiliser dans votre application. Vous allez apprendre à utiliser les bases fonctionnelles de Vuex telles que state, getters, mutations, actions ou modules. Vous allez également voir comment garantir une meilleure organisation de vos composants, ainsi qu'un code plus propre et maintenable.
 
